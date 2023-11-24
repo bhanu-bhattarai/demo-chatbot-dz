@@ -14,16 +14,7 @@ def information():
 	
 @app.route('/webhook', methods = ['POST'])
 def render_image_file():
-   data = {
-   "Name":"Bhanu Bhakta Bhattarai",
-   "Student Id":"200566953",
-   "class":"Conversational AI"
-      }
-   return make_response(jsonify({'fulfillmentText': "hello from the other side i just ment to be my"}))
-
-@app.route('/back', methods=['POST'])
-def go_back():
-    return upload_file()
+   return make_response(jsonify({'fulfillmentText': "DEZED RENOS - Thank You For contacting us."}))
 
 if __name__ == '__main__':
    app.run(debug = True)
