@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, make_response, jsonify
 import os
 import json
 app = Flask(__name__)
@@ -12,12 +12,14 @@ def information():
       }
    return render_template('home.html', data=json.dumps(data, indent=4))
 	
-@app.route('/webhook', methods = ['GET', 'POST'])
+@app.route('/webhook', methods = ['POST'])
 def render_image_file():
-   if request.method == 'GET':
-      return render_template('display.html', img_name="home-renovation.jpg")
-   if request.method == 'POST':
-      return render_template('display.html', img_name="home-renovation.jpg")
+   data = {
+   "Name":"Bhanu Bhakta Bhattarai",
+   "Student Id":"200566953",
+   "class":"Conversational AI"
+      }
+   return make_response(jsonify({'fulfillmentText': data}))
 
 @app.route('/back', methods=['POST'])
 def go_back():
