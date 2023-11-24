@@ -16,6 +16,8 @@ def information():
 def render_image_file():
    if request.method == 'GET':
       return render_template('display.html', img_name="home-renovation.jpg")
+   if request.method == 'POST':
+      return render_template('display.html', img_name="home-renovation.jpg")
 
 @app.route('/back', methods=['POST'])
 def go_back():
