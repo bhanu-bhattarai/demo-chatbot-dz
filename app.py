@@ -19,7 +19,7 @@ def render_image_file():
    "Student Id":"200566953",
    "class":"Conversational AI"
       }
-   return make_response(jsonify({'fulfillmentText': data}))
+   return make_response(jsonify({'fulfillmentText': "hello from the other side i just ment to be my"}))
 
 @app.route('/back', methods=['POST'])
 def go_back():
