@@ -14,7 +14,7 @@ def information():
 	
 @app.route('/webhook', methods = ['POST'])
 def render_image_file():
-   return make_response(jsonify({'fulfillmentText': "DEZED RENOS - Thank You For contacting us."}))
+   return make_response(jsonify({'fulfillmentText': "DEZED RENOS - Happy to serve you"}))
 
 if __name__ == '__main__':
    app.run(debug = True)
